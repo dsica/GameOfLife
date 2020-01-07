@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TileView.swift
 //  GameOfLife
 //
 //  Created by David Sica on 1/6/20.
@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TileView: View {
+    var tile: Tile?
+    
     var body: some View {
-        Text("Hello, World!")
+        Text(tile?.stringId() ?? "NA")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TileView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TileView()
     }
 }
