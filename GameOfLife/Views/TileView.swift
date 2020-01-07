@@ -12,7 +12,12 @@ struct TileView: View {
     var tile: Tile?
     
     var body: some View {
-        Text(tile?.stringId() ?? "NA")
+        Text(tile?.stringId() ?? "?")
+            .fixedSize(horizontal: true, vertical: true)
+            .frame(width: floor(UIScreen.main.bounds.width/11), height: floor(UIScreen.main.bounds.width/11))
+            .font(.subheadline)
+            .foregroundColor(.white)
+            .background((tile?.liveState ?? false) ? Color.green : Color.red)
     }
 }
 

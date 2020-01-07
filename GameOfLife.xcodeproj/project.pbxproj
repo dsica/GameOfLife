@@ -15,6 +15,9 @@
 		89659F4623C3DA1F00415EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89659F4423C3DA1F00415EBB /* LaunchScreen.storyboard */; };
 		89659F5123C3DA1F00415EBB /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89659F5023C3DA1F00415EBB /* GameOfLifeTests.swift */; };
 		89659F5C23C3DA2000415EBB /* GameOfLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89659F5B23C3DA2000415EBB /* GameOfLifeUITests.swift */; };
+		89659F6B23C3DAA200415EBB /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89659F6A23C3DAA200415EBB /* Tile.swift */; };
+		89659F6D23C3DB2400415EBB /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89659F6C23C3DB2400415EBB /* Board.swift */; };
+		89659F7123C3F41900415EBB /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89659F7023C3F41900415EBB /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		89659F3623C3DA1D00415EBB /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89659F3623C3DA1D00415EBB /* Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89659F3923C3DA1D00415EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89659F3B23C3DA1D00415EBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89659F3D23C3DA1D00415EBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		89659F5723C3DA2000415EBB /* GameOfLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89659F5B23C3DA2000415EBB /* GameOfLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeUITests.swift; sourceTree = "<group>"; };
 		89659F5D23C3DA2000415EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89659F6A23C3DAA200415EBB /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		89659F6C23C3DB2400415EBB /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		89659F7023C3F41900415EBB /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +95,7 @@
 		89659F3723C3DA1D00415EBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				89659F3623C3DA1D00415EBB /* GameOfLife.app */,
+				89659F3623C3DA1D00415EBB /* Game of Life.app */,
 				89659F4C23C3DA1F00415EBB /* GameOfLifeTests.xctest */,
 				89659F5723C3DA2000415EBB /* GameOfLifeUITests.xctest */,
 			);
@@ -101,10 +107,11 @@
 			children = (
 				89659F3923C3DA1D00415EBB /* AppDelegate.swift */,
 				89659F3B23C3DA1D00415EBB /* SceneDelegate.swift */,
-				89659F3D23C3DA1D00415EBB /* ContentView.swift */,
 				89659F3F23C3DA1F00415EBB /* Assets.xcassets */,
 				89659F4423C3DA1F00415EBB /* LaunchScreen.storyboard */,
 				89659F4723C3DA1F00415EBB /* Info.plist */,
+				89659F7223C3FA9B00415EBB /* Views */,
+				89659F6923C3DA9000415EBB /* Data */,
 				89659F4123C3DA1F00415EBB /* Preview Content */,
 			);
 			path = GameOfLife;
@@ -136,6 +143,24 @@
 			path = GameOfLifeUITests;
 			sourceTree = "<group>";
 		};
+		89659F6923C3DA9000415EBB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				89659F6A23C3DAA200415EBB /* Tile.swift */,
+				89659F6C23C3DB2400415EBB /* Board.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		89659F7223C3FA9B00415EBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89659F3D23C3DA1D00415EBB /* ContentView.swift */,
+				89659F7023C3F41900415EBB /* TileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,7 +178,7 @@
 			);
 			name = GameOfLife;
 			productName = GameOfLife;
-			productReference = 89659F3623C3DA1D00415EBB /* GameOfLife.app */;
+			productReference = 89659F3623C3DA1D00415EBB /* Game of Life.app */;
 			productType = "com.apple.product-type.application";
 		};
 		89659F4B23C3DA1F00415EBB /* GameOfLifeTests */ = {
@@ -269,7 +294,10 @@
 			files = (
 				89659F3A23C3DA1D00415EBB /* AppDelegate.swift in Sources */,
 				89659F3C23C3DA1D00415EBB /* SceneDelegate.swift in Sources */,
+				89659F6D23C3DB2400415EBB /* Board.swift in Sources */,
 				89659F3E23C3DA1D00415EBB /* ContentView.swift in Sources */,
+				89659F7123C3F41900415EBB /* TileView.swift in Sources */,
+				89659F6B23C3DAA200415EBB /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sufficientmagicsoftware.GameOfLife;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game of Life";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sufficientmagicsoftware.GameOfLife;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game of Life";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
